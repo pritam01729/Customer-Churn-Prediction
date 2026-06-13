@@ -1,10 +1,5 @@
 # Telecom Customer Churn Prediction
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange.svg)](https://scikit-learn.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00.svg)](https://www.tensorflow.org/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-Ensemble-green.svg)](https://xgboost.ai/)
-
 > End-to-end machine learning pipeline predicting telecom customer churn to optimize retention. Leverages SMOTE for class balancing and 5-Fold Cross-Validation. Compares Random Forest, XGBoost, and a custom Keras/TensorFlow ANN. Includes a serialized model for real-time customer risk scoring.
 
 ## Project Overview
@@ -13,7 +8,7 @@ Customer retention is a critical KPI for telecommunications operators, as acquir
 By accurately identifying high-risk customers, telecom providers can proactively deploy retention strategies to protect revenue.
 
 ## The Dataset
-The project utilizes the **IBM Telco Customer Churn dataset** (~7,043 rows, 21 features), which includes:
+The project utilizes the **WA_Fn-UseC_-Telco-Customer-Churn dataset** (~7,043 rows, 21 features), which includes:
 * **Demographics:** Gender, Age (Senior Citizen), Dependents.
 * **Services:** Internet type, Tech Support, Streaming capabilities.
 * **Financials/Account:** Contract type, Monthly Charges, Total Charges.
@@ -23,7 +18,6 @@ The project utilizes the **IBM Telco Customer Churn dataset** (~7,043 rows, 21 f
 ### 1. Data Cleaning & Preprocessing
 * **Handling Missing Data:** Addressed hidden missing values (blank strings) in the `TotalCharges` column.
 * **Encoding:** Applied Label Encoding to transform binary and multi-class text categorical data into machine-readable formats.
-* **Feature Scaling:** Applied `StandardScaler` to numerical columns (`tenure`, `MonthlyCharges`, `TotalCharges`) to ensure accurate gradient descent for the neural network.
 
 ### 2. Class Balancing (SMOTE)
 The original dataset suffered from severe class imbalance (~73% retained / 27% churned). I implemented the **Synthetic Minority Over-sampling Technique (SMOTE)** to synthetically balance the training data, preventing the models from developing a majority-class bias.
@@ -45,4 +39,4 @@ I built and evaluated four distinct algorithms using 5-Fold Cross-Validation to 
 2. **Contract Vulnerability:** Customers on Month-to-Month contracts exhibit a drastically higher churn rate compared to those locked into one- or two-year commitments.
 3. **Retention Drivers:** Customers who lack basic add-on services like "Tech Support" or "Online Security" are highly susceptible to leaving.
 
-   git clone [https://github.com/](https://github.com/)[YourUsername]/[YourRepoName].git
+   git clone [https://github.com/](https://github.com/)pritam01729/Customer-Churn-Prediction.git
